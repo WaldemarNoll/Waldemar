@@ -238,6 +238,17 @@ body {
     background: var(--link-color);
 }
 
+.blur {
+    position: absolute;
+    width: calc(100% - 80px);
+    height: 100%;
+    top: 0;
+    right: 0;
+    backdrop-filter: blur(10px);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
 
 @media (max-width: 840px) {
     .navbar {
@@ -274,17 +285,7 @@ body {
     .gitpc {
         min-height: 50%;
     }
-}
-
-
-.blur {
-    position: absolute;
-    width: calc(100% - 80px);
-    height: 100%;
-    top: 0;
-    right: 0;
-    backdrop-filter: blur(10px);
-    pointer-events: none;
-    opacity: 0;
-    transition: opacity 0.5s ease;
+    .blur {
+        width: 100%;
+    }
 }
